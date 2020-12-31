@@ -2,6 +2,12 @@
 name = "psw"
 version = "0.1.0"
 authors = ["Wulfsta <wulfstawulfsta@gmail.com>"]
+description = "Command line tool to write random bytes to stdout."
+license = "MIT/Apache-2.0"
+keywords = [ "prng", "stdout" ]
+readme = "README.md"
+homepage = "https://github.com/Wulfsta/psw"
+repository = "https://github.com/Wulfsta/psw"
 
 [dependencies]
 clap = "2.33.3"
