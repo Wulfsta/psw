@@ -1,0 +1,10 @@
+[package]
+name = "psw"
+version = "0.1.0"
+authors = ["Wulfsta <wulfstawulfsta@gmail.com>"]
+
+[dependencies]
+clap = "2.33.3"
+num = "0.3.1"
+rand = "0.8.0"
+rand_pcg = "0.3.0"
