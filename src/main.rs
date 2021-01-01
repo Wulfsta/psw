@@ -19,10 +19,14 @@ use rand::{
     SeedableRng,
 };
 use std::{
-    fmt::Debug,
     io,
-    io::Write,
     mem,
+};
+use std::fmt::{
+    Debug,
+};
+use std::io::{
+    Write,
 };
 
 #[derive(Clone, Debug)]
@@ -36,13 +40,11 @@ impl<T: Clone + Debug + Rng + SeedableRng> RngContainer<T> {
     }
 
     fn output_bytes(&mut self) -> Result<usize, io::Error> {
-        let eight_bytes: usize = self.rng.gen::<usize>();
-        io::stdout().write(&eight_bytes.to_ne_bytes())
+        io::stdout().write(&self.rng.gen::<usize>().to_ne_bytes())
     }
 
     fn output_less_than_usize_bytes(&mut self, n: usize) -> Result<usize, io::Error> {
-        let eight_bytes: usize = self.rng.gen();
-        io::stdout().write(&eight_bytes.to_ne_bytes()[0..n])
+        io::stdout().write(&self.rng.gen::<usize>().to_ne_bytes()[0..n])
     }
 }
 
