@@ -50,7 +50,7 @@ impl<T: Clone + Debug + Rng + SeedableRng> RngContainer<T> {
 
 fn main() {
     let arg_defs = App::new("psw: prng-stdio-writer")
-                        .version("0.1.0")
+                        .version("0.1.2")
                         .about("Writes output of pcg64 to stdout.")
                         .arg(Arg::with_name("bytes")
                              .short("b")
